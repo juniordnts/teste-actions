@@ -22,6 +22,15 @@ jobs:
         with:
           node-version: '18' 
 
+      - name: Ls na pasta
+        run: ls
+
+      - name: Entra na pasta
+        run: cd src
+        
+      - name: Ls na pasta
+        run: ls
+
       - name: Instalar dependencias
         if: false
         run: npm install
