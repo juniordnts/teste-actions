@@ -34,12 +34,13 @@ jobs:
         id: get-commit-count
         run: |
           COMMIT_COUNT=$(git rev-list --count origin/main)
+          COISA=011
           echo "Afff"
           echo "name=COMMIT_COUNT::$COMMIT_COUNT" >> $GITHUB_OUTPUT
 
       - name: Criar nova tag
         run: |
-          COMMIT_COUNT=${{ steps.get-commit-count.outputs.COMMIT_COUNT }}
+          COMMIT_COUNT=${{ steps.get-commit-count.outputs.COISA }}
           NEW_TAG="build-${COMMIT_COUNT}"
           git tag $NEW_TAG
           git push origin $NEW_TAG
