@@ -50,7 +50,7 @@ jobs:
 
       - name: Zipar pasta de build
         run: |
-          zip -r teste.zip .next
+          zip -r teste.zip src
 
       - name: Gerar artefato
         uses: actions/upload-artifact@v3
