@@ -13,6 +13,10 @@ jobs:
     name: Pipeline de Build
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: src
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -50,7 +54,7 @@ jobs:
 
       - name: Zipar pasta de build
         run: |
-          zip -r teste.zip src
+          zip -r teste.zip app
 
       - name: Gerar artefato
         uses: actions/upload-artifact@v3
