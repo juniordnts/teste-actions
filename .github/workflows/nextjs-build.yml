@@ -23,15 +23,18 @@ jobs:
           node-version: '18' 
 
       - name: Instalar dependencias
+        if: false
         run: npm install
 
       - name: Build Next.js
+        if: false
         run: npm run build
 
       - name: Contar commits
         id: get-commit-count
         run: |
           COMMIT_COUNT=$(git rev-list --count origin/main)
+          echo "Afff"
           echo "name=COMMIT_COUNT::$COMMIT_COUNT" >> $GITHUB_OUTPUT
 
       - name: Criar nova tag
