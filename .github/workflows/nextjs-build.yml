@@ -35,7 +35,7 @@ jobs:
         run: |
           git fetch --unshallow
           COMMIT_COUNT=$(git rev-list --count origin/main)
-          echo "$COMMIT_COUNT Commits feitos nesta banch."
+          echo "$COMMIT_COUNT Commits feitos nesta banch"
           echo "COMMIT_COUNT=$COMMIT_COUNT" >> $GITHUB_OUTPUT
 
       - name: Criar nova tag
