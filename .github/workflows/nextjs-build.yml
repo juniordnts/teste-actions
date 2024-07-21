@@ -35,7 +35,7 @@ jobs:
         run: |
           COMMIT_COUNT=$(git rev-list --count origin/main)
           COISA=011
-          echo "Afff"
+          echo "Afff $COISA $COMMIT_COUNT"
           echo "name=COMMIT_COUNT::$COMMIT_COUNT" >> $GITHUB_OUTPUT
 
       - name: Criar nova tag
