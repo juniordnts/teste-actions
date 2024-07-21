@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    name: Pipeline de Build
     runs-on: ubuntu-latest
 
     steps:
